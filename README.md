@@ -29,20 +29,20 @@ This project allows users to create a wish list of vacation destinations by subm
 
 - User enters destination details in the form (Name, Location, Photo URL, Description).
 - On form submission:
-- - Input values are captured.
-- - Form fields are cleared.
-- - A new destination card is created dynamically.
-- - If this is the first entry, the title updates to "My Wishlist."
+  - Input values are captured.
+  - Form fields are cleared.
+  - A new destination card is created dynamically.
+  - If this is the first entry, the title updates to "My Wishlist."
 - Users can click the Remove button to delete a destination from the list.
 
 ### Screenshot
 
-![](/screenshot.png)
+![](/images/Vacation%20Destination.png)
 
 ### Links
 
 - Solution URL: [https://github.com/Jud1th1/Vacation-Destination-Project] https://github.com/Jud1th1/Vacation-Destination-Project
-- Live Site URL: [https://distanceconverter01.netlify.app/] https://distanceconverter01.netlify.app/
+- Live Site URL: [https://vacationdestinationwish.netlify.app/] https://vacationdestinationwish.netlify.app/
 
 ## My process
 
@@ -54,7 +54,7 @@ This project allows users to create a wish list of vacation destinations by subm
 
 ### Project Breakdown
 
-- I followed a structured approach to build this project, using a flowchart in Canva to visualize the steps. Here’s a breakdown:
+- I followed a structured approach to build this project, using a flowchart to visualize the steps. Here’s a breakdown:
   ![](/images/Vacation%20Destination%20Flowchart.png)
 
 1️⃣ Form Submission Handling
