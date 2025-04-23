@@ -7,31 +7,41 @@
     <title>Vacation Destinations WishList</title>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Koulen&family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
 	<!-- Our CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
         <h1>Vacation Destinations Wish List</h1>
-        <p>Found exciting places to visit on your next vacation? Use the form below to add them to your wish list.</p>
+        <h2>Found exciting places to visit on your next vacation? Use the form below to add them to your wish list.</h2>
     </header>
 
-    <main>
+    <main id="main-content">
         <form id="destination_details_form">
+            <div class="div1">
             <label for="name">Destination Name</label>
             <input type="text" id="name" placeholder="Enter destination name" required>
+            </div>
 
+            <div class="div2">
             <label for="location">Destination Location</label>
             <input type="text" id="location" placeholder="Where is the destination located?" required>
+            </div>
 
+            <div class="div3">
             <label for="photo">Photo</label>
             <input type="url" id="photo" placeholder="Provide a URL for photo">
+            </div>
 
+            <div class="div4">
             <label for="description">Destination Description</label>
             <textarea id="description" placeholder="Describe the destination"></textarea>
+            </div>
 
             <button type="submit">Add to List</button>
         </form>
