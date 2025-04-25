@@ -29,11 +29,30 @@
             document.getElementById('title').innerHTML = "My Wishlist";
         } 
 
-        //5. aSdd the card
+        //5. Hide empty state if it's showing
+        document.getElementById("empty-state").classList.add("hidden");
+        //5. Then add the card
         document.querySelector("#destinations_container").appendChild(destCard);
 
     }
 
+//Default card on DOM load 
+    window.addEventListener("DOMContentLoaded", () => {
+        const defaultCard = createDestinationCard(
+            "Paris Las Vegas",
+            "Las Vegas, NV",
+            "images/signpost.jpg", // Update with actual path or leave empty to test fallback image
+            "Birthday Trip!"
+        );
+    
+        const wishListContainer = document.getElementById("destinations_container");
+        wishListContainer.appendChild(defaultCard);
+    
+        // Make sure wishlist title shows and empty state is hidden
+        document.getElementById("title").innerText = "My Wishlist";
+        document.getElementById("empty-state").style.display = "none";
+    });
+    
 //run a function that creates new card
 //create a function that has 4 parameters that match our 4 fields from the form:
     function createDestinationCard(name, location, photoURL, description){
@@ -89,16 +108,22 @@
     }
 
 //Create function that removes the card-
-//When the user clicks the remove button in a card, go to the parent's parent, 
-// as shown highlighted on the right, and remove that element, 
-// which is the card that goes with the button that was pressed. 
+//When the user clicks the remove button in a card, go to the parent's parent and remove that element, 
+//which is the card that goes with the button that was pressed. 
+//If all cards are removed then show an empty state:
 
     function removeDestination(event) {
         const card = event.target.parentElement.parentElement;
         card.remove();
+
+        const wishListContainer = document.getElementById("destinations_container");
+        const emptyState = document.getElementById("empty-state");
+
+        if (wishListContainer.children.length === 0) {
+            console.log("✅ No cards left, showing empty state.");
+            emptyState.classList.remove("hidden"); 
+            emptyState.style.removeProperty('display'); // remove the inline style that’s overriding CSS
+            document.getElementById("title").innerText = "";
+        } 
     }
-
-    //Lastly, fill in steps 3 & 5 for the function that handles the form submission. 
-    //This should be working now. Also remove the dummy HTML code
     })();
-

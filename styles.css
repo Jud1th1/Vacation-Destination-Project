@@ -152,35 +152,87 @@ main{
     opacity: 1;
   }
   
+/*__________________________
+        Card Styling
+____________________________*/
 
-
-/* 
-img{
-    max-width: 100%;
+#wishlist-section {
+  text-align: center;
+  padding: 2rem 1rem;
 }
 
-
-
-#title{
-    text-align: center;
+#title {
+  font-family: "Koulen", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-label{
-    display: block;
-    margin-bottom: .5em;
+#empty-state {
+  text-align: center;
+  color: #333;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  margin: 3rem auto;
+  max-width: 500px;
 }
 
-button{
-    display: block;
-    width: 100%;
-    margin-bottom: 1em;
-    border: 1px solid #666;
-    padding: 10px;
-    box-sizing: border-box;
+#empty-state:not(.hidden) {
+  opacity: 1;
+}
+
+#empty-state img {
+  max-width: 300px;
+  margin-top: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+#destinations_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .card{
-    padding: 20px;
-    background-color: #efefef;
-    margin-bottom: 20px;
-} */
+  background-color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 1rem;
+  text-align: left;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card-body h3{
+  color:#e4643a;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-body h4{
+  font-weight: 400;
+  font-size: 1.33rem;
+  margin-bottom: 10px;
+}
+
+.card-body button{
+  background-color: #fff;
+  border:2px solid #FFAB8E;
+  padding: 5px;
+  margin: 1rem 0;
+  color: #9e9999;
+}
+
+.card-body button:hover{
+  background-color: #FFAB8E;
+  color: #000;
+}
