@@ -58,15 +58,17 @@ main{
     margin: auto;
 }
 
-#destination_details_form{
+#destination_details_form {
     background-color: #8C9CAD;
-    margin: auto;
+    margin: 0 auto 2rem;
     padding: 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    color: #000;
 }
 
 #destination_details_form input,
@@ -84,6 +86,7 @@ main{
 #destination_details_form label {
   font-weight: bold;
   display: block;
+  font-size: 0.9rem;
   margin-bottom: 0.25rem;
   color: #000;
 }
@@ -91,6 +94,7 @@ main{
 #destination_details_form textarea {
   resize: vertical;
   min-height: 80px;
+  grid-column: span 3;
 }
 
 #destination_details_form {
@@ -104,35 +108,50 @@ main{
 .div3 { grid-area: 1 / 3 / 2 / 4; }
 .div4 { grid-area: 2 / 1 / 3 / 4; }
 
-#destination_details_form button {
+.add-btn {
     background-color: #FFAB8E;
     color: white;
     font-weight: bold;
     border: none;
-    border-radius: 6px;
-    padding: 0.6rem 1.2rem;
-    grid-column: span 3;
-    justify-self: center;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-#destination_details_form button:hover {
-    background-color: #e4643a;
-    transform: scale(1.05);
-  }
-  
-#destination_details_form button {
-    grid-column: 1 / -1; /* spans all columns */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    grid-column: 3 / 4;
+    align-self: end;
     justify-self: end;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
   }
   
-
-
-
-
-
+  .add-btn:hover {
+    background-color: #e4643a;
+    transform: scale(1.1);
+  }
+  
+  /* Tooltip on hover */
+  .add-btn::after {
+    content: "Add to Wishlist";
+    position: absolute;
+    right: 110%; /* push it to the left of the button */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .add-btn:hover::after {
+    opacity: 1;
+  }
+  
 
 
 /* 
