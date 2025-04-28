@@ -39,10 +39,10 @@
 //Default card on DOM load 
     window.addEventListener("DOMContentLoaded", () => {
         const defaultCard = createDestinationCard(
-            "Paris Las Vegas",
+            "Ex: Paris Las Vegas",
             "Las Vegas, NV",
-            "images/signpost.jpg", // Update with actual path or leave empty to test fallback image
-            "Birthday Trip!"
+            "images/vegasparis.jpg", // Update with actual path or leave empty to test fallback image
+            "Birthday Trip! 🥳"
         );
     
         const wishListContainer = document.getElementById("destinations_container");
@@ -63,7 +63,7 @@
         img.setAttribute('alt', name); //how to set alt attribute (A11Y)
 
         //if photo is provided we use that or provide default photo:
-        const constantPhotoUrl = "images/signpost.jpg";
+        const constantPhotoUrl = "images/Vacationimage.jpg";
 
         if(photoURL.length === 0){
             img.setAttribute('src', constantPhotoUrl);

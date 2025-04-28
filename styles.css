@@ -83,7 +83,7 @@ main{
 #destination_details_form {
     background-color: #8C9CAD;
     margin: 0 auto 2rem;
-    padding: 2rem 2rem 1rem 2rem;
+    padding: 2rem 2rem 0rem 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 10px;
@@ -101,7 +101,6 @@ main{
   color: #000;
   border: none;
   border-radius: 4px;
-  border: none;
   font-family: inherit;
   margin-bottom: 1rem;
 }
@@ -133,13 +132,13 @@ main{
 
 .add-btn {
     background-color: #FFAB8E;
-    color: white;
+    color: #000;
     font-weight: bold;
     border: none;
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     grid-column: 3 / 4;
     align-self: end;
     justify-self: end;
@@ -147,15 +146,27 @@ main{
     transition: transform 0.3s ease;
     position: relative;
     bottom: 60px;
+    left: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
   }
   
-.add-btn:hover {
-  background-color: #e4643a;
-  transform: scale(1.1);
-}
+  .card-body button:hover, 
+  .card-body button:focus,
+  .add-btn:hover, 
+  .add-btn:focus {
+    background-color: #DD8F74;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
+                rgba(0, 0, 0, 0.09) 0px 4px 2px,
+                rgba(0, 0, 0, 0.09) 0px 8px 4px,
+                rgba(0, 0, 0, 0.09) 0px 16px 8px,
+                rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transform: scale(1.1);
+  }
+  
 
 /* Tooltip on hover */
-.add-btn::after {
+.add-btn::after{
   content: "Add to Wishlist";
   position: absolute;
   right: 110%; 
@@ -250,19 +261,16 @@ ____________________________*/
 }
 
 .card-body button{
-  background-color: #fff;
-  border:2px solid #FFAB8E;
-  padding: 5px;
-  margin: 1rem 0;
-  color: #9e9999;
-}
-
-.card-body button:hover{
   background-color: #FFAB8E;
+  border:0px;
   color: #000;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  padding: 8px;
+  margin: 1rem 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
-
-
 
 @media (max-width: 768px) {
   body{
@@ -288,11 +296,10 @@ ____________________________*/
     border-radius: 30px 30px 0 0;
     margin-top: -50px;
     background-color: #F5F7F9;
-    box-shadow: 0px 6px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
   }
 
   .subtitle{
-    color: #514C4C;
     padding-top: 1rem;
   }
 
@@ -301,7 +308,7 @@ ____________________________*/
     background-color: #A6B3C2; 
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0px 6px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
   }
 
   .div1, .div2, .div3, .div4 {
@@ -313,7 +320,7 @@ ____________________________*/
     margin: 2rem auto 0 auto;
     display: block;
     left: 45%; 
-    transform: translateY(-80%);
+    transform: translateY(-50%);
   }
 
 }
