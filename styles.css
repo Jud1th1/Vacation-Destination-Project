@@ -83,7 +83,7 @@ main{
 #destination_details_form {
     background-color: #8C9CAD;
     margin: 0 auto 2rem;
-    padding: 2rem;
+    padding: 2rem 2rem 1rem 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 10px;
@@ -103,13 +103,14 @@ main{
   border-radius: 4px;
   border: none;
   font-family: inherit;
+  margin-bottom: 1rem;
 }
 
 #destination_details_form label {
   font-weight: bold;
   display: block;
   font-size: 0.9rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
   color: #000;
 }
 
@@ -136,8 +137,8 @@ main{
     font-weight: bold;
     border: none;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     font-size: 1.5rem;
     grid-column: 3 / 4;
     align-self: end;
@@ -145,35 +146,36 @@ main{
     cursor: pointer;
     transition: transform 0.3s ease;
     position: relative;
+    bottom: 60px;
   }
   
-  .add-btn:hover {
-    background-color: #e4643a;
-    transform: scale(1.1);
-  }
-  
-  /* Tooltip on hover */
-  .add-btn::after {
-    content: "Add to Wishlist";
-    position: absolute;
-    right: 110%; /* push it to the left of the button */
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 6px 10px;
-    font-size: 0.75rem;
-    border-radius: 5px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
-  
-  .add-btn:hover::after {
-    opacity: 1;
-  }
-  
+.add-btn:hover {
+  background-color: #e4643a;
+  transform: scale(1.1);
+}
+
+/* Tooltip on hover */
+.add-btn::after {
+  content: "Add to Wishlist";
+  position: absolute;
+  right: 110%; 
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.add-btn:hover::after {
+  opacity: 1;
+}
+
 /*__________________________
         Card Styling
 ____________________________*/
@@ -304,6 +306,14 @@ ____________________________*/
 
   .div1, .div2, .div3, .div4 {
     margin-bottom: 1.2rem;
+  }
+
+  .add-btn {
+    position: relative;
+    margin: 2rem auto 0 auto;
+    display: block;
+    left: 45%; 
+    transform: translateY(-80%);
   }
 
 }
