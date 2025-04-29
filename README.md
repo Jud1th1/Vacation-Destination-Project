@@ -14,16 +14,19 @@
 
 ## Description
 
-This project allows users to create a wish list of vacation destinations by submitting a form. The entered details generate a dynamic card displaying the destination name, location, photo (if provided), and description. Users can also remove destinations from the list.
+Vacation Destinations Wish List is a polished, mobile-responsive app that allows users to create and manage a list of dream travel spots. Users can submit new destinations through a form, view them as dynamic cards, and remove them at any time.
+
+This project focuses on clean design, user-friendly interactions, accessibility, and mobile-first responsiveness.
 
 ### Features
 
 ✔️ Add vacation destinations to a wish list using a form
 ✔️ Auto-clear form fields after submission
-✔️ Display destinations as cards with an optional image
-✔️ Default image provided when no URL is entered
-✔️ Remove destinations from the list
-✔️ Dynamic title update when the first destination is added
+✔️ Display destinations as responsive cards with custom or default images
+✔️ Remove destinations from the list with a smooth hover + focus experience
+✔️ "Empty State" message appears when no destinations are present
+✔️ Mobile-first, fully responsive layout with custom header + background design
+✔️ Keyboard navigable (skip link, focusable buttons, screen reader-friendly labels)
 
 ### How It Works
 
@@ -31,9 +34,11 @@ This project allows users to create a wish list of vacation destinations by subm
 - On form submission:
   - Input values are captured.
   - Form fields are cleared.
+  - A default image appears if no photo is provided.
   - A new destination card is created dynamically.
   - If this is the first entry, the title updates to "My Wishlist."
 - Users can click the Remove button to delete a destination from the list.
+- If all destinations are removed, an empty state image and message appear automatically.
 
 ### Screenshot
 
@@ -46,11 +51,20 @@ This project allows users to create a wish list of vacation destinations by subm
 
 ## My process
 
+- Started with a basic version from a course exercise.
+- Redesigned layout entirely in Figma (desktop + mobile mockups).
+- Implemented a mobile-first, card-based UI.
+- Added visual polish: box shadows, hover transitions, button focus states.
+- Focused on accessibility: skip links, aria labels, keyboard navigation.
+- Troubleshooted dynamic behaviors like empty state messages.
+- Created a smooth user experience across devices.
+
 ### Technologies Used
 
-- HTML5
-- CSS
-- JavaScript: Handles form submission, card creation, and deletion
+- HTML5 (Semantic structure)
+- CSS3 (Custom styling + responsive design)
+- JavaScript (DOM manipulation, dynamic rendering, form handling)
+- Figma (UI design planning)
 
 ### Project Breakdown
 
@@ -75,9 +89,10 @@ This project allows users to create a wish list of vacation destinations by subm
 
 ### Future Improvement
 
-- Add local storage to save destinations across sessions
-- Allow users to edit existing destinations
-- Improve UI with animations and responsive design
+- Save destinations to LocalStorage for persistence across sessions
+- Add "favorite" functionality (heart toggle)
+- Add edit/update functionality to existing cards
+- Animations for card entry/removal transitions
 
 ### Acknowledgments
 
